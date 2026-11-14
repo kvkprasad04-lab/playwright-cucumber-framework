@@ -1,0 +1,21 @@
+{
+  "name": "playwright-cucumber-framework",
+  "version": "1.0.0",
+  "scripts": {
+    "bddgen": "bddgen",
+    "test": "bddgen && playwright test",
+    "test:headed": "HEADLESS=false bddgen && HEADLESS=false playwright test",
+    "test:firefox": "BROWSER=firefox bddgen && BROWSER=firefox playwright test",
+    "test:webkit": "BROWSER=webkit bddgen && BROWSER=webkit playwright test",
+    "test:login": "bddgen && playwright test --grep @login",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.0",
+    "@types/node": "^26.6.6",
+    "playwright-bdd": "^9.2.1",
+    "typescript": "^7.0.2"
+  },
+  "private": true,
+  "description": "Playwright + Cucumber (playwright-bdd) UI tests in TypeScript"
+}
